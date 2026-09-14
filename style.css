@@ -16,7 +16,8 @@ body {
 
 #clock {
     font-family: monospace;
-    font-size: 6.5rem;
+    /* Scales dynamically with screen width, staying readable on phones and desktops */
+    font-size: clamp(2.2rem, 10vw, 6.5rem);
     font-weight: bold;
     text-align: center;
     color: white;
