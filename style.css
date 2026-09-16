@@ -1,27 +1,199 @@
-body {
-    background-image: url('addis.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-}
+body{
 
-#clock-container {
     display: flex;
-    justify-content: center;
+
+    flex-direction: column;
+
     align-items: center;
-    height: 100vh;
+
+    background-color: hsl(0, 0%, 90%);
+
+    margin: 0;
+
+    padding: 15px;
+
 }
 
-#clock {
-    font-family: monospace;
-    /* Scales dynamically with screen width, staying readable on phones and desktops */
-    font-size: clamp(2.2rem, 10vw, 6.5rem);
-    font-weight: bold;
+#myH1{
+
+    font-size: 4rem;
+
+    font-family: "Arial", sans-serif;
+
+    color: hsl(0, 0%, 25%);
+
     text-align: center;
+
+}
+
+#container{
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: min(90vw, 850px);
+
+    border: 5px solid hsl(0, 0%, 30%);
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    box-sizing: border-box;
+
+}
+
+#display{
+
+    font-size: clamp(2.5rem, 8vw, 5rem);
+
+    font-family: monospace;
+
+    font-weight: bold;
+
+    color: hsl(0, 0%, 30%);
+
+    text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+}
+
+#controls{
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+#controls button{
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+    padding: 10px 20px;
+
+    margin: 5px;
+
+    min-width: 125px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
     color: white;
-    backdrop-filter: blur(3px);
-    background-color: hsla(0, 0%, 100%, 0.1);
-    width: 100%;
+
+    transition: background-color 0.5s ease;
+
+}
+
+#startBtn{
+
+    background-color: hsl(115, 100%, 40%);
+
+}
+
+#startBtn:hover{
+
+    background-color: hsl(115, 100%, 30%);
+
+}
+
+#stopBtn{
+
+    background-color: hsl(58, 100%, 40%);
+
+}
+
+#stopBtn:hover{
+
+    background-color: hsl(58, 100%, 30%);
+
+}
+
+#resetBtn{
+
+    background-color: hsl(17, 100%, 40%);
+
+}
+
+#resetBtn:hover{
+
+    background-color: hsl(17, 100%, 30%);
+
+}
+
+@media (max-width: 600px){
+
+    #myH1{
+
+        font-size: 2.5rem;
+
+    }
+
+    #container{
+
+        width: 95vw;
+
+        padding: 20px 10px;
+
+    }
+
+    #display{
+
+        font-size: clamp(2rem, 11vw, 3.5rem);
+
+    }
+
+    #controls button{
+
+        font-size: 1.2rem;
+
+        min-width: 100px;
+
+        padding: 10px 15px;
+
+    }
+
+}
+
+@media (max-width: 400px){
+
+    #myH1{
+
+        font-size: 2rem;
+
+    }
+
+    #display{
+
+        font-size: 2rem;
+
+    }
+
+    #controls button{
+
+        font-size: 1rem;
+
+        min-width: 90px;
+
+        padding: 8px 12px;
+
+    }
+
 }
